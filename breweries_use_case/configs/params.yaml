@@ -1,0 +1,5 @@
+breweries_endpoint: "https://api.openbrewerydb.org/breweries"
+bronze_location: "/opt/airflow/breweries_use_case/data/bronze/"
+silver_location: "/opt/airflow/breweries_use_case/data/silver/"
+gold_location: "/opt/airflow/breweries_use_case/data/gold/"
+file_name: "breweries_"
