@@ -7,16 +7,6 @@ import requests
 import sys
 
 import logging
-def bronze_breweries_task():
-    logger = logging.getLogger("airflow.task")
-    logger.info("Iniciando o script bronze_breweries.py")
-    
-    # Seu código aqui...
-    
-    logger.info("Finalizando o script bronze_breweries.py")
-    
-bronze_breweries_task()
-
 sys.path.append('/opt/airflow/breweries_use_case/utils')
 
 import render
