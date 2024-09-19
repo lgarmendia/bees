@@ -63,6 +63,7 @@ def list_bronze_files(bronze_path: str, max_processed_date: str) -> list:
             # Verifica se o caminho atual é um arquivo
             if (
                 os.path.isfile(os.path.join(bronze_path, path))
+                and path.endswith(".json") 
                 and path.split("_")[1].split(".")[0] > max_processed_date
             ):
                 # Concatena o caminho corretamente e substitui as barras invertidas
