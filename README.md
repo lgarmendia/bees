@@ -48,10 +48,10 @@ To execute the complete pipeline: Activate the DAG named exec_bronze. This DAG w
 To execute specific stages: Activate the DAGs corresponding to the desired stages. This allows you to process each phase of the pipeline independently, as needed.
 
 Processed files will be organized into their corresponding folders:
-   * data/bronze
-   * data/silver
-   * data/data_quality
-   * data/gold
+   * bees/breweries_use_case/data/bronze
+   * bees/breweries_use_case/data/silver
+   * bees/breweries_use_case/data/data_quality
+   * bees/breweries_use_case/data/gold
 
 ## Monitoring/Alerting
 In a production environment, it would be possible to implement monitoring and alerting for the pipeline using Airflow's email configuration. However, since this is a local setup, I did not configure the SMTP server.
