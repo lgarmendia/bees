@@ -1,10 +1,14 @@
 """Bronze layer loader."""
 import json
 import logging
+<<<<<<< HEAD
 import sys
 from datetime import date
 
 import requests
+=======
+sys.path.append('/opt/airflow/breweries_use_case/utils')
+>>>>>>> 5690fed361cea547a42cc79d2b4229de40aab31d
 
 sys.path.append("/opt/airflow/breweries_use_case/utils")
 import render

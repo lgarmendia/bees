@@ -65,7 +65,11 @@ def list_bronze_files(bronze_path: str, max_processed_date: str) -> list:
         # Check if the current path is a file
         if (
                 os.path.isfile(os.path.join(bronze_path, path))
+<<<<<<< HEAD
                 and path.endswith(".json")
+=======
+                and path.endswith(".json") 
+>>>>>>> 5690fed361cea547a42cc79d2b4229de40aab31d
                 and path.split("_")[1].split(".")[0] > max_processed_date
         ):
             # Properly concatenate the file path and normalize the slashes
