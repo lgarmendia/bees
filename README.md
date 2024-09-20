@@ -42,6 +42,7 @@ After starting the Docker image, access the Airflow web interface at http://loca
 
 - Username: airflow
 - Password: airflow
+
 In the Airflow dashboard, activate the DAGs to start processing the pipeline.
 
 To execute the complete pipeline: Activate the DAG named exec_bronze. This DAG will sequentially process all stages, from data ingestion in the Bronze layer to the Gold layer.
