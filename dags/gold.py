@@ -1,4 +1,5 @@
 import os
+import timedelta 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.dagrun_operator import TriggerDagRunOperator
@@ -19,6 +20,7 @@ default_args = {
 
 with DAG(
     'exec_gold',
+    dagrun_timeout=timedelta(hours=2),
     default_args=default_args,
     description='DAG to execute the gold_breweries.py script.',
     start_date=datetime(2024, 9, 12, 00, 00),

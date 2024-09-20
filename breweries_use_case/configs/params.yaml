@@ -1,3 +1,4 @@
+quality_location: "/opt/airflow/breweries_use_case/data/data_quality/"
 breweries_endpoint: "https://api.openbrewerydb.org/breweries"
 bronze_location: "/opt/airflow/breweries_use_case/data/bronze/"
 silver_location: "/opt/airflow/breweries_use_case/data/silver/"
