@@ -1,5 +1,5 @@
 import os
-import timedelta 
+from datetime import timedelta
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -30,15 +30,15 @@ with DAG(
 ) as dag:
 
     # Task to execute the local Python script.
+
     exec_script = PythonOperator(
         task_id='exec_silver',
         python_callable=run_local_python_script
     )
 
     TriggerDag = TriggerDagRunOperator(
-        task_id='trigger_dag_data_quality',
+        task_id='trigger_data_quality',
         trigger_dag_id="exec_data_quality",
         wait_for_completion=True
     )
-    
-    exec_script >> TriggerDag 
+    exec_script >> TriggerDag
