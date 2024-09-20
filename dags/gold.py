@@ -1,5 +1,5 @@
 import os
-import timedelta 
+from datetime import timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.dagrun_operator import TriggerDagRunOperator
