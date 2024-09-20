@@ -35,14 +35,10 @@ with DAG(
         python_callable=run_local_python_script
     )
 
-    TriggerDagSilver = TriggerDagRunOperator(
+    TriggerDag = TriggerDagRunOperator(
         task_id='trigger_dag_silver',
         trigger_dag_id="exec_silver",
         wait_for_completion=True
     )
-    TriggerDagGold = TriggerDagRunOperator(
-        task_id='trigger_dag_gold',
-        trigger_dag_id="exec_gold",
-        wait_for_completion=True
-    )
-    exec_script >> TriggerDagSilver >> TriggerDagGold
+    
+    exec_script >> TriggerDag 

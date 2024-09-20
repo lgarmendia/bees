@@ -35,4 +35,10 @@ with DAG(
         python_callable=run_local_python_script
     )
 
-    exec_script 
+    TriggerDag = TriggerDagRunOperator(
+        task_id='trigger_dag_data_quality',
+        trigger_dag_id="exec_data_quality",
+        wait_for_completion=True
+    )
+    
+    exec_script >> TriggerDag 
